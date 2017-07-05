@@ -28,14 +28,24 @@ class TodosList
 	def high_priority_todos
 		puts "High priority tasks are: "
 		@todos.each { |todo|
-			puts todo.content unless todo.priority == :low
+			if todo.complete? == false
+				status = "-Incomplete"
+			else 
+				status = "-Complete"
+			end
+			puts "#{todo.content} #{status}" unless todo.priority == :low
 		}
 	end
 
 	def low_priority_todos
 		puts "Low priority tasks are: "
 		@todos.each { |todo|
-			puts todo.content unless todo.priority == :high
+			if todo.complete? == false
+				status = "-Incomplete"
+			else 
+				status = "-Complete"
+			end
+			puts "#{todo.content} #{status}" unless todo.priority == :high
 		}
 	end
 

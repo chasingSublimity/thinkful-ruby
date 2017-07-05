@@ -10,6 +10,6 @@ todos = [todo0, todo1, todo2, todo3]
 
 todo_list = TodosList.new(todos)
 
-todo_list.low_priority_todos
-puts "\n"
 todo_list.high_priority_todos
+puts "\n"
+todo_list.low_priority_todos
